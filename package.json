@@ -1,0 +1,27 @@
+{
+  "name": "project7",
+  "version": "1.0.0",
+  "description": "Basic HTML calculator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivsongit/project7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivsongit/project7/issues"
+  },
+  "homepage": "https://github.com/vivsongit/project7#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "jasmine-pretty-html-reporter": "^0.2.5"
+  },
+  "devDependencies": {
+    "jsdom": "^16.2.2"
+  }
+}

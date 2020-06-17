@@ -1,23 +1,25 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: normal;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: normal;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(to right, rgb(248, 215, 155), rgb(100, 100, 245)););
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(to right, rgb(248, 215, 155), rgb(100, 100, 245));
 }
 
 .calculator-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh;
+	grid-template-columns: repeat(4, 80px);
+	grid-template-rows: minmax(100px, auto) repeat(5, 80px);
 }
 
 .calculator-grid > button {
@@ -36,7 +38,6 @@ body {
 	grid-column: span 2;
 }
 
-
 .output {
 	/* span entire width of calculator from 1 to -1 (last col) */
 	grid-column: 1 / -1;
@@ -51,11 +52,11 @@ body {
 }
 
 .output .previous-operand {
-  color: rgba(255, 255, 255, .9);
-  font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.5rem;
 }
 
 .output .current-operand {
-  color: white;
-  font-size: 2.5rem;
+	color: white;
+	font-size: 2.5rem;
 }
