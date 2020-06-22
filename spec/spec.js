@@ -65,7 +65,8 @@ describe('Plus', () => {
 	beforeEach(() => {
 		calculator.clear()
 	})
-	
+
+	// general input
 	it('shows “1” in output after clicking on “1”', () => {
 		calculator.appendNumber(btn(1))
 		calculator.updateDisplay()
@@ -82,6 +83,8 @@ describe('Plus', () => {
     expect(document.getElementById('data-current-operand').innerText).toBe('12')
   })
 
+//   sum test
+
   it('shows “4” in output after clicking on “1+3=”', () => {
 	calculator.appendNumber(btn(1))
 	calculator.updateDisplay()
@@ -93,6 +96,70 @@ describe('Plus', () => {
 	calculator.updateDisplay()
 	
 	expect(document.getElementById('data-current-operand').innerText).toBe('4')
+  })
+
+//   subtract
+  
+  it('shows “9” in output after clicking on “18-9=”', () => {
+	calculator.appendNumber(btn(1))
+	calculator.appendNumber(btn(8))
+	calculator.updateDisplay()
+	calculator.chooseOperation("-")
+	calculator.updateDisplay()
+	calculator.appendNumber(btn(9))
+	calculator.updateDisplay()
+	calculator.compute()
+	calculator.updateDisplay()
+	
+	expect(document.getElementById('data-current-operand').innerText).toBe('9')
+  })
+
+//   multiply
+
+it('shows “27” in output after clicking on “3x9=”', () => {
+	calculator.appendNumber(btn(3))
+	calculator.updateDisplay()
+	calculator.chooseOperation("x")
+	calculator.updateDisplay()
+	calculator.appendNumber(btn(9))
+	calculator.updateDisplay()
+	calculator.compute()
+	calculator.updateDisplay()
+	
+	expect(document.getElementById('data-current-operand').innerText).toBe('27')
+  })
+
+//   divide
+
+it('shows “70” in output after clicking on “140÷2”', () => {
+	calculator.appendNumber(btn(1))
+	calculator.appendNumber(btn(4))
+	calculator.appendNumber(btn(0))
+	calculator.updateDisplay()
+	calculator.chooseOperation("÷")
+	calculator.updateDisplay()
+	calculator.appendNumber(btn(2))
+	calculator.updateDisplay()
+	calculator.compute()
+	calculator.updateDisplay()
+	
+	expect(document.getElementById('data-current-operand').innerText).toBe('70')
+  })
+
+//   decimals
+
+it('shows “15.5” in output after clicking on “62÷4”', () => {
+	calculator.appendNumber(btn(6))
+	calculator.appendNumber(btn(2))
+	calculator.updateDisplay()
+	calculator.chooseOperation("÷")
+	calculator.updateDisplay()
+	calculator.appendNumber(btn(4))
+	calculator.updateDisplay()
+	calculator.compute()
+	calculator.updateDisplay()
+	
+	expect(document.getElementById('data-current-operand').innerText).toBe('15.5')
   })
 
 })
