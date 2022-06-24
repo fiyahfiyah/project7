@@ -22,6 +22,6 @@
     "jasmine-pretty-html-reporter": "^0.2.5"
   },
   "devDependencies": {
-    "jsdom": "^16.2.2"
+    "jsdom": "^16.5.0"
   }
 }
